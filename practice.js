@@ -129,7 +129,7 @@ function uniq(arr, cb){
     }
 
   }
-
+  return arr
 }
 
 // Do not edit the code below.
