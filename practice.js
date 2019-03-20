@@ -123,11 +123,11 @@ function uniq(arr, cb){
   
   for (i = 0; i < arr.length-1; i++){
     for (let j = 0; j <arr.length; j++){
-      // if (arr[i] ===arr[j]){//duplicate
-      //   arr.splice(arr[j],1)
-        while (arr[i]===arr[j]){
-          arr.splice(arr[j],1)
-        }
+      if (arr[i] ===arr[j]){//duplicate
+        arr.splice(arr[j],1)
+        // while (arr[i]===arr[j]){
+        //   arr.splice(arr[j],1)
+        // }
       }
     }
     cb(arr)
@@ -193,4 +193,5 @@ var users = [
 getUserById(users, '16t', function(user){
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
-// Do not edit the code above.
+// Do not edit the code above
+}
