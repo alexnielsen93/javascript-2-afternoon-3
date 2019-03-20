@@ -125,6 +125,9 @@ function uniq(arr, cb){
     for (let j = 0; j <arr.length; j++){
       if (arr[i] ===arr[j]){//duplicate
         arr.splice(arr[j],1)
+        while (arr[i]===arr[j]){
+          arr.splice(arr[j],1)
+        }
       }
     }
 
