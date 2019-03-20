@@ -123,17 +123,16 @@ function uniq(arr, cb){
   
   for (i = 0; i < arr.length-1; i++){
     for (let j = 0; j <arr.length; j++){
-      if (arr[i] ===arr[j]){//duplicate
-        arr.splice(arr[j],1)
+      // if (arr[i] ===arr[j]){//duplicate
+      //   arr.splice(arr[j],1)
         while (arr[i]===arr[j]){
           arr.splice(arr[j],1)
         }
       }
     }
-
+    cb(arr)
   }
-  cb(arr)
-}
+ 
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
