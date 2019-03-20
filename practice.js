@@ -49,7 +49,9 @@ first(names, function(firstName){
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-//Code Here
+function last(arr, cb){
+  cb(arr[arr.length-1])
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -67,7 +69,9 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-//Code Here
+function multiply(num1, num2, cb){
+  cb(num1*num2)
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -86,7 +90,14 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+function contains(arr, name, cb){
+  for (i = 0; i < arr.length; i++){
+    if(arr[i] === name){
+      cb(true)
+    }
+  }
+  cb(false)
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
